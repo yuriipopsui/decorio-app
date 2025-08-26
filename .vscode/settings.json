@@ -1,5 +1,8 @@
 {
+<<<<<<< HEAD
   "javascript.preferences.quoteStyle": "single",
   "typescript.preferences.quoteStyle": "single",
   "prettier.jsxSingleQuote": true
+=======
+>>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
 }

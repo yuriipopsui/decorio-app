@@ -10,8 +10,13 @@ import Counter from '@/components/ui/counter';
 import { bannerData } from '@/lib/fackData/bannerData';
 
 export const metadata = {
+<<<<<<< HEAD
   title: 'Decorio',
   description: 'Decorio - decorative plasters in Your interior',
+=======
+  title: "Decorio",
+  description: "Decorio - decorative plasters in Your interior",
+>>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
 };
 
 const Home = () => {
@@ -27,8 +32,17 @@ const Home = () => {
       <ProjectsSlider />
       <Testimonial />
       {/* <ShopSlider data={productData.slice(0, 5)} /> */}
+<<<<<<< HEAD
     </>
   );
 };
 
 export default Home;
+=======
+
+    </>
+  )
+}
+
+export default Home;
+>>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect } from 'react';
 
 const useStickyHeader = (linkColor) => {
@@ -12,10 +13,27 @@ const useStickyHeader = (linkColor) => {
     const nav_link = document.querySelectorAll('.bottom-navbar .nav-link');
     const other_icon = document.querySelectorAll('.bottom-navbar .other_icon');
     const logo = document.querySelector('.logo');
+=======
+import React, { useEffect } from "react";
+
+const useStickyHeader = (linkColor) => {
+  useEffect(() => {
+    window.addEventListener("scroll", isSticky);
+    return () => window.removeEventListener("scroll", isSticky);
+  }, []);
+
+  const isSticky = () => {
+    const header = document.querySelector(".bottom-navbar");
+    const mobileNavbar = document.querySelector(".mobile-navbar");
+    const nav_link = document.querySelectorAll(".bottom-navbar .nav-link");
+    const other_icon = document.querySelectorAll(".bottom-navbar .other_icon");
+    const logo = document.querySelector(".logo");
+>>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
 
     const scrollTop = window.scrollY;
     if (scrollTop >= 250) {
       header?.classList.add(
+<<<<<<< HEAD
         'container-fluid',
         'fixed',
         'top-0',
@@ -40,6 +58,32 @@ const useStickyHeader = (linkColor) => {
       nav_link.forEach((ele) => {
         ele.classList.remove('py-[34px]');
         ele.classList.add('py-5');
+=======
+        "container-fluid",
+        "fixed",
+        "top-0",
+        "left-0",
+        "w-full",
+        "bg-background",
+        "z-20",
+        "animate-slideDown",
+        "shadow-md"
+      );
+      mobileNavbar?.classList.add(
+        "container-fluid",
+        "fixed",
+        "top-0",
+        "left-0",
+        "w-full",
+        "bg-background",
+        "z-20",
+        "animate-slideDown"
+      );
+
+      nav_link.forEach((ele) => {
+        ele.classList.remove("py-[34px]");
+        ele.classList.add("py-5");
+>>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
         // if (linkColor) {
         //   if (
         //     ele.classList.contains("text-white") ||
@@ -59,6 +103,7 @@ const useStickyHeader = (linkColor) => {
     }
     if (scrollTop < 50) {
       header?.classList.remove(
+<<<<<<< HEAD
         'container-fluid',
         'fixed',
         'top-0',
@@ -83,6 +128,32 @@ const useStickyHeader = (linkColor) => {
       nav_link.forEach((ele) => {
         ele.classList.remove('py-5');
         ele.classList.add('py-[34px]');
+=======
+        "container-fluid",
+        "fixed",
+        "top-0",
+        "left-0",
+        "w-full",
+        "bg-background",
+        "z-20",
+        "animate-slideDown",
+        "shadow-md"
+      );
+      mobileNavbar?.classList.remove(
+        "container-fluid",
+        "fixed",
+        "top-0",
+        "left-0",
+        "w-full",
+        "bg-background",
+        "z-20",
+        "animate-slideDown"
+      );
+
+      nav_link.forEach((ele) => {
+        ele.classList.remove("py-5");
+        ele.classList.add("py-[34px]");
+>>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
         // if (linkColor) {
         //   if (
         //     ele.classList.contains("text-black") ||

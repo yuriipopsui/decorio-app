@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import RightArrow from '@/assets/icons/rightArrow';
 import ButtonFill from '../ui/buttons/buttonFill';
 import { staticBluarDataUrl } from '@/lib/staticBluarDataUrl';
+=======
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import RightArrow from "@/assets/icons/rightArrow";
+import ButtonFill from "../ui/buttons/buttonFill";
+import { staticBluarDataUrl } from "@/lib/staticBluarDataUrl";
+>>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
 
 const MegaMenu = ({ dropDownList, parentId }) => {
   return (
@@ -32,7 +41,11 @@ const MegaMenu = ({ dropDownList, parentId }) => {
                       </p>
                       <Link href={path}>
                         <ButtonFill className="absolute  bottom-4 left-6 w-[83%] after:bg-secondary border-secondary text-primary-foreground right-0 hover:text-secondary-foreground">
+<<<<<<< HEAD
                           {desc} <RightArrow width={'35'} height={'22'} />
+=======
+                          {desc} <RightArrow width={"35"} height={"22"} />
+>>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
                         </ButtonFill>
                       </Link>
                     </div>

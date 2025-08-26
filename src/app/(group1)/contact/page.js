@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
@@ -13,13 +14,34 @@ import Feedback from '@/components/section/feedback';
 import ButtonOutline from '@/components/ui/buttons/buttonOutline';
 
 const LeafletMap = dynamic(() => import('@/components/ui/leafletMap'), {
+=======
+import dynamic from "next/dynamic";
+import Image from "next/image";
+
+import AddressCard from "@/components/ui/cards/addressCard";
+import SectionTitle from "@/components/ui/sectionTitle";
+import { addressList } from "@/lib/fackData/addressList";
+import InputFiled from "@/components/ui/inputFiled";
+import TextAreaFiled from "@/components/ui/textAreaFiled";
+import RightArrow from "@/assets/icons/rightArrow";
+import from_img from "@/assets/images/contact-image.jpg";
+import Feedback from "@/components/section/feedback";
+import ButtonOutline from "@/components/ui/buttons/buttonOutline";
+
+const LeafletMap = dynamic(() => import("@/components/ui/leafletMap"), {
+>>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
   loading: () => <p>A map is loading</p>,
   ssr: false,
 });
 
 export const metadata = {
+<<<<<<< HEAD
   title: 'Architronix -- Contact',
   description: 'Architronix is a next js and tailwind css website',
+=======
+  title: "Architronix -- Contact",
+  description: "Architronix is a next js and tailwind css website",
+>>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
 };
 
 const Contact = () => {
@@ -29,9 +51,15 @@ const Contact = () => {
       <section>
         <div className="container-fluid ">
           <SectionTitle
+<<<<<<< HEAD
             sectionName={'Contact'}
             sectionTitle={'Let`s Design Together'}
             sectionDesc={'Reach out to bring your dream spaces to life.'}
+=======
+            sectionName={"Contact"}
+            sectionTitle={"Let's Design Together"}
+            sectionDesc={"Reach out to bring your dream spaces to life."}
+>>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
           />
         </div>
         <div className="container lg:pt-30 2sm:pt-20 pt-14">
@@ -49,7 +77,11 @@ const Contact = () => {
                     phone={phone}
                     lat_lng={lat_lng}
                   />
+<<<<<<< HEAD
                 ),
+=======
+                )
+>>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
               )}
             </div>
             <div className="w-full max-h-[392px] lg:sticky lg:top-20 z-[1] mt-16 lg:mt-0">
@@ -64,9 +96,15 @@ const Contact = () => {
       <section>
         <div className="container-fluid ">
           <SectionTitle
+<<<<<<< HEAD
             sectionName={'Inquiry'}
             sectionTitle={'Have a Project in your mind?'}
             sectionDesc={'Write us directly'}
+=======
+            sectionName={"Inquiry"}
+            sectionTitle={"Have a Project in your mind?"}
+            sectionDesc={"Write us directly"}
+>>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
           />
         </div>
         <div className="container lg:pt-30 2sm:pt-20 pt-14">
@@ -80,6 +118,7 @@ const Contact = () => {
             />
             <form>
               <InputFiled
+<<<<<<< HEAD
                 placeholderc={'Your Name'}
                 type={'text'}
                 className={'mb-[13px]'}
@@ -103,6 +142,31 @@ const Contact = () => {
               <div className="flex justify-end">
                 <ButtonOutline>
                   Send massage <RightArrow height={'22'} width={'35'} />
+=======
+                placeholderc={"Your Name"}
+                type={"text"}
+                className={"mb-[13px]"}
+              />
+              <div className="flex sm:flex-row flex-col gap-x-5">
+                <InputFiled
+                  placeholderc={"Phone Number"}
+                  type={"number"}
+                  className={"mb-[13px]"}
+                />
+                <InputFiled
+                  placeholderc={"Your Email"}
+                  type={"email"}
+                  className={"mb-[13px]"}
+                />
+              </div>
+              <TextAreaFiled
+                placeholder={"Type your massage"}
+                className={"min-h-[223px] mb-[13px]"}
+              />
+              <div className="flex justify-end">
+                <ButtonOutline>
+                  Send massage <RightArrow height={"22"} width={"35"} />
+>>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
                 </ButtonOutline>
               </div>
             </form>

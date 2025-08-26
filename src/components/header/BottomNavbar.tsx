@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { FC, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
@@ -19,6 +20,29 @@ import type { RootState } from '@/redux/store';
 type BottomNavbarProps = {
   linkColor?: string;
 };
+=======
+"use client";
+import React, { FC, useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import DropDownMenu from "./DropDownMenu";
+import MegaMenu from "./megaMenu";
+import Logo from "@/assets/icons/logo";
+import Search from "@/assets/icons/search";
+import { menuList } from "@/lib/fackData/menuList";
+import Offcanvas from "./Offcanvas";
+import Cart from "./cart";
+import { cn, countCartProductQuantity } from "@/lib/utils";
+import ShopCart from "@/assets/icons/shopCart";
+import { useSelector } from "react-redux";
+import { usePathname } from "next/navigation";
+import useActiveNavLink from "@/hooks/useActiveNavLink";
+import useStickyHeader from "@/hooks/useStickyHeader";
+import type {RootState} from "@/redux/store";
+
+type BottomNavbarProps= {
+  linkColor?: string;
+}
+>>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
 
 const BottomNavbar: FC<BottomNavbarProps> = ({ linkColor }) => {
   const { products } = useSelector((state: RootState) => state.addToCart);
@@ -33,8 +57,16 @@ const BottomNavbar: FC<BottomNavbarProps> = ({ linkColor }) => {
     <>
       <div className="bottom-navbar flex justify-between items-center">
         <div>
+<<<<<<< HEAD
           <Link href="/" className={cn('logo text-primary-foreground')}>
             <Logo height={'31'} width={'219'} />
+=======
+          <Link
+            href="/"
+            className={cn(`logo text-primary-foreground`)}
+          >
+            <Logo height={"31"} width={"219"} />
+>>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
           </Link>
         </div>
         <nav>
@@ -46,15 +78,23 @@ const BottomNavbar: FC<BottomNavbarProps> = ({ linkColor }) => {
                     href={path}
                     data-id={id}
                     className={cn(
+<<<<<<< HEAD
                       `nav-link text-xl2 font-medium px-7 py-[30px] flex items-center gap-2  group-hover:bg-primary group-hover:text-secondary-foreground ${linkColor}`,
+=======
+                      `nav-link text-xl2 font-medium px-7 py-[30px] flex items-center gap-2  group-hover:bg-primary group-hover:text-secondary-foreground ${linkColor}`
+>>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
                     )}
                   >
                     {name}
                     {(isDropdown || isMegaMenu) && (
                       <span
+<<<<<<< HEAD
                         className={
                           ' transition-all duration-500 rotate-180 group-hover:rotate-0 group-hover:text-secondary-foreground'
                         }
+=======
+                        className={` transition-all duration-500 rotate-180 group-hover:rotate-0 group-hover:text-secondary-foreground`}
+>>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
                       >
                         <svg
                           width="12"
@@ -68,7 +108,11 @@ const BottomNavbar: FC<BottomNavbarProps> = ({ linkColor }) => {
                       </span>
                     )}
                   </Link>
+<<<<<<< HEAD
                   {Array.isArray(isDropdown) && isDropdown.length > 0 && (
+=======
+                  {Array.isArray(isDropdown) && isDropdown.length >0 && (
+>>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
                     <DropDownMenu dropDownList={isDropdown} parentId={id} />
                   )}
                   {Array.isArray(isMegaMenu) && isMegaMenu.length > 0 && (
@@ -79,6 +123,7 @@ const BottomNavbar: FC<BottomNavbarProps> = ({ linkColor }) => {
             })}
             <li
               className={cn(
+<<<<<<< HEAD
                 `other_icon text-primary-foreground px-6 cursor-pointer ${linkColor}`,
               )}
               onClick={() => setOffcanvasActive(true)}
@@ -92,12 +137,31 @@ const BottomNavbar: FC<BottomNavbarProps> = ({ linkColor }) => {
               onClick={() => setCartActive(true)}
             >
               <ShopCart height={'24'} width={'24'} /> 3
+=======
+                `other_icon text-primary-foreground px-6 cursor-pointer ${linkColor}`
+              )}
+              onClick={() => setOffcanvasActive(true)}
+            >
+              <Search height={"24"} width={"24"} />
+            </li>
+            <li
+              className={cn(
+                `other_icon text-primary-foreground pl-6 cursor-pointer flex relative ${linkColor}`
+              )}
+              onClick={() => setCartActive(true)}
+            >
+              <ShopCart height={"24"} width={"24"} /> 3
+>>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
               {products.length ? (
                 <span className="font-medium flex items-center justify-center text-secondary-foreground text-sm absolute -top-3 -right-4 w-6 h-6 bg-primary rounded-full">
                   {countCartProductQuantity(products)}
                 </span>
               ) : (
+<<<<<<< HEAD
                 ''
+=======
+                ""
+>>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
               )}
             </li>
           </ul>
