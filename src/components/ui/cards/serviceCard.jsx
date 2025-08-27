@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
->>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
 import { cn } from '@/lib/utils';
 import OutlineSvgText from '../outlineSvgText';
 import Link from 'next/link';
 
-<<<<<<< HEAD
 const ServiceCard = ({ id, service_name, service_desc, text_muted, link }) => {
   return (
     <div className="px-3 sm:px-0">
@@ -27,16 +23,3 @@ const ServiceCard = ({ id, service_name, service_desc, text_muted, link }) => {
 };
 
 export default ServiceCard;
-=======
-const ServiceCard = ({id, service_name, service_desc, text_muted, link}) => {
-    return (
-        <div className='px-3 sm:px-0'>
-            <OutlineSvgText text={id}/>
-            <Link href={link} className={cn(`text-primary-foreground font-bold leading-135 md:text-4xl text-3xl hover-underline ${text_muted}`)}><span>{service_name}</span></Link>
-            <p className={cn(`font-normal text-primary-foreground ${text_muted}`)}>{service_desc}</p>
-        </div>
-    )
-}
-
-export default ServiceCard
->>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620

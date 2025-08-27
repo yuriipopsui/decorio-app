@@ -1,24 +1,14 @@
-<<<<<<< HEAD
 'use client';
 import React, { FC } from 'react';
 import CloseIcon from '@/assets/icons/closeIcon';
 import Search from '@/assets/icons/search';
 import useOverflowHidden from '@/hooks/useOverflowHidden';
 import { cn } from '@/lib/utils';
-=======
-"use client";
-import React, {FC} from "react";
-import CloseIcon from "@/assets/icons/closeIcon";
-import Search from "@/assets/icons/search";
-import useOverflowHidden from "@/hooks/useOverflowHidden";
-import { cn } from "@/lib/utils";
->>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
 
 type OffcanvasProps = {
   setOffcanvasActive: (value: boolean) => void;
   offcanvasActive: boolean;
   bg_muted?: string;
-<<<<<<< HEAD
 };
 
 const Offcanvas = ({
@@ -26,23 +16,13 @@ const Offcanvas = ({
   offcanvasActive,
   bg_muted = '',
 }: OffcanvasProps) => {
-=======
-}
-
-const Offcanvas = ({ setOffcanvasActive, offcanvasActive, bg_muted = "" }: OffcanvasProps) => {
->>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
   // useOverflowHidden(offcanvaseActive)
   return (
     <div
       className={cn(
         `w-full min-h-screen h-full bg-primary ${bg_muted} fixed z-40 ${
-<<<<<<< HEAD
           offcanvasActive ? 'top-0 visible ' : '-top-[400%] invisible'
         } left-0 transition-all duration-700`,
-=======
-          offcanvasActive ? "top-0 visible " : "-top-[400%] invisible"
-        } left-0 transition-all duration-700`
->>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
       )}
     >
       <div className="w-full relative">
@@ -66,13 +46,8 @@ const Offcanvas = ({ setOffcanvasActive, offcanvasActive, bg_muted = "" }: Offca
             className="w-full border-[1.5px] border-secondary bg-transparent outline-none px-9  py-[19px] 2sm:text-[35px] text-2xl font-medium text-secondary_rgba placeholder:text-secondary-foreground_rgba  "
           />
           <span className="text-secondary-foreground absolute right-7 top-1/2 -translate-y-1/2 cursor-pointer">
-<<<<<<< HEAD
             {' '}
             <Search height={'38'} width={'38'} />
-=======
-            {" "}
-            <Search height={"38"} width={"38"} />
->>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
           </span>
         </div>
       </form>

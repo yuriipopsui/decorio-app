@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
-=======
-import { cn } from "@/lib/utils";
-import Link from "next/link";
-import React from "react";
->>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
 
 export type DropdownItem = {
   id: number;
@@ -20,7 +14,6 @@ type DropDownMenuProps = {
   parentId: number;
 };
 
-<<<<<<< HEAD
 const DropDownMenu = ({
   dropDownList,
   bgColor = 'bg-white',
@@ -30,13 +23,6 @@ const DropDownMenu = ({
     <div
       className={cn(
         `absolute z-50 bg-primary flex max-h-0 py-0 overflow-hidden  transition-all duration-500  group-hover:max-h-[300px] group-hover:py-5 ${bgColor}`,
-=======
-const DropDownMenu = ({ dropDownList, bgColor="bg-white", parentId }: DropDownMenuProps) => {
-  return (
-    <div
-      className={cn(
-        `absolute z-50 bg-primary flex max-h-0 py-0 overflow-hidden  transition-all duration-500  group-hover:max-h-[300px] group-hover:py-5 ${bgColor}`
->>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
       )}
     >
       <ul className="min-w-60 px-6">
@@ -63,11 +49,7 @@ const DropDownMenu = ({ dropDownList, bgColor="bg-white", parentId }: DropDownMe
                 <Link
                   href={path}
                   data-id={parentId}
-<<<<<<< HEAD
                   className='dropdown-item text-secondary-foreground text-xl font-medium  inline-block relative after:transition-all after:duration-700 after:absolute after:left-0 after:bottom-0 after:contents-[""] after:w-0 after:h-[2px] after:bg-secondary after:hover:w-full'
-=======
-                  className='dropdown-item text-secondary-foreground text-xl font-medium  inline-block relative after:transition-all after:duration-700 after:absolute after:left-0 after:bottom-0 after:contents-[""] after:w-0 after:h-[2px] after:bg-secondary after:hover:w-full '
->>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
                 >
                   {name}
                 </Link>

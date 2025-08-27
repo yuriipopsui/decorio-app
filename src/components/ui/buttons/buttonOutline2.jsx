@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { cn } from '@/lib/utils';
 import React from 'react';
 
@@ -16,17 +15,3 @@ const ButtonOutline2 = ({ children, className, ...props }) => {
 };
 
 export default ButtonOutline2;
-=======
-import { cn } from '@/lib/utils'
-import React from 'react'
-
-const ButtonOutline2 = ({children, className, ...props}) => {
-    return (
-        <button {...props} className={cn(`flex items-center justify-center gap-2.5 whitespace-nowrap sm:text-2xl text-xl font-bold border-2 border-primary px-10 sm:py-[15px] py-3 relative overflow-hidden after:absolute after:left-0 after:bottom-0 after:top-0 after:z-[-1] after:bg-primary after:w-0 after:transition-all after:duration-500 hover:after:w-full hover:bg-primary hover:text-white transition-all duration-500 ${className}`)}>
-            {children}
-        </button>
-    )
-}
-
-export default ButtonOutline2
->>>>>>> e8d6a32193b09e027a45e147f659d7c35aa60620
